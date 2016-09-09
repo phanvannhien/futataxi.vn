@@ -1,0 +1,651 @@
+@import 'bootstrap/less/bootstrap.less';
+
+body{
+    font-family: "Roboto";
+}
+
+@color-page: #FF422A;
+@color-button-actived : #CA230E;
+.bg-btn-actived{
+    background-color: @color-button-actived;
+}
+
+.bg-btn-info{
+    background-color: #186b84;
+}
+
+.bg-gray{
+    background-color: #ddd;
+}
+
+.padding10{
+    padding: 10px;
+}
+.bg-info{
+    background-color: #146A84;
+}
+.bg-success{
+    background-color: #1F8456;
+}
+
+.text-success{
+
+    color: #1F8456;
+}
+
+.bg-facebook{
+    .fa-circle{
+        color:#3B60AE;
+    }
+}
+
+.bg-google{
+    .fa-circle{
+        color:#E96437;
+    }
+}
+
+.bg-twister{
+    .fa-circle{
+        color:#1BBFE2;
+    }
+}
+
+
+.border {
+    border: 1px solid #ddd;
+}
+
+.text-white{
+    color: #FFF;
+}
+.bg-white{
+    background-color: #FFF;
+}
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding:0;
+}
+
+a{
+    color:  @color-page;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.d-table{
+    display: table;
+    > div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+.relative{
+    position: relative;
+}
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+
+
+h1{
+    
+    font-size: 24px;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 18px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+h5{
+    font-size: 14px;
+}
+
+.heading{
+    font-size: 2em;
+    color: #4A4A4A;
+    margin: 30px 0;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+}
+/*******************************************************************************
+** Sprites
+**/
+
+.sprite{
+    background-image: url('../img/sprite.png');
+    display: inline-block;
+}
+
+.btn-flat{
+    position: relative;
+    padding-left: 45px;
+}
+
+.icon-flat{
+    padding: 9px 12px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+.ico-time {
+    width: 75px;
+    height: 67px;
+    display: inline-block;
+    background-position: 0 0;
+}
+.ico-like {
+    width: 75px;
+    height: 67px;
+    display: inline-block;
+    background-position: -103px 0;
+}
+
+.ico-bag {
+    width: 75px;
+    height: 67px;
+    display: inline-block;
+    background-position: -210px 0;
+}
+
+.ico-box{
+    background: url(../images/ico-box.png) no-repeat left center;
+}
+.ico-list{
+    background: url(../images/ico-list.png) no-repeat left center;
+}
+.ico-package{
+    background: url(../images/ico-package.png) no-repeat left center;
+}
+.ico-relation{
+    background: url(../images/ico-relation.png) no-repeat left center;
+}
+.ico-tracking{
+    background: url(../images/ico-tracking.png) no-repeat left center;
+}
+
+.title{
+    color: #178555;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+.valign-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    img{
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        transform: translateX(-50%);
+    }
+}
+
+/*******************************************************************************
+** Header
+**/
+
+#top-nav{
+    background: #003517;
+    ul{
+        margin: 0 0 0 100px;
+        padding: 0;
+        list-style: none;
+        li{
+            float: left;
+            padding: 10px 20px;
+            list-style: none;
+            border-right: 1px solid #0F4125;
+            &:last-child{
+                border-right: none;
+            }
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.3);
+                a{
+                    opacity: 1;
+                }
+            }
+            a{
+                opacity: 0.5;
+                color: white;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+#top-banner{
+   padding: 95px 0 75px 0;
+   background: rgba(0, 0, 0, 0.2);
+   h1{
+        color: white;
+        font-family: "Roboto Condensed";
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 64px;
+        text-align: center;
+   }
+   p{
+        /* Base text style */
+        color: white;
+        font-family: "Roboto Slab";
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: 400;
+        span{
+            font-weight: 700;
+        }
+   }
+}
+
+
+
+/*******************************************************************************
+** Nav
+**/
+
+ nav{
+    background: #FFF;
+    padding: 10px 0;
+    ul{
+        margin: 10px 0 0;
+        padding: 0;
+        float: left;
+        li{
+            list-style-type: none;
+            float: left;
+            padding: 0 8px;
+            line-height: 35px;
+
+            a{
+                color: #7d7d7d;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                text-transform: uppercase;
+                display: block;
+                padding-bottom: 5px;
+                &:hover{
+                    border-bottom: 2px solid #f24826;
+                }
+            }
+            .active{
+                border-bottom: 2px solid #f24826;
+            }
+        }
+    }
+
+    #logo-main{
+        margin-top: -30px;
+    }
+}
+
+#simple-price{
+    #simple-wrap{
+        width: 1024px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        #car1{
+            position: absolute;
+            bottom: 97px;
+        }
+        #car2{
+            bottom: 45px;
+            position: absolute;
+        }
+
+    }
+    p{
+
+        color: #949494;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+
+#quanlity-is-invidual{
+    #quanlity-wrapper{
+        margin-bottom: 40px;
+    }
+    h2{
+        text-align: center;
+        color: #FFF;
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    .wrap-item{
+        height: 350px;
+        background: #FFF;
+        border-radius: 10px;
+        padding:50px 30px;
+        -webkit-box-shadow: 0px 3px 12px 1px rgba(58, 58, 58, 0.75);
+        -moz-box-shadow:    0px 3px 12px 1px rgba(58, 58, 58, 0.75);
+        box-shadow:         0px 3px 12px 1px rgba(58, 58, 58, 0.75);
+        h3{
+            text-transform: uppercase;
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 25px;
+            text-align: justify;
+        }
+    }
+
+}
+
+#testino{
+    #tes-container{
+        height: 300px; 
+        width: 100%;
+        position: relative;
+        .u-popover{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+             border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border: 2px solid #FFF;
+        }
+        .popover{
+            background: #c73517;
+            .popover-title{
+                background-color: none;
+            }
+            .arrow{
+                &:after{
+                    border-top-color: #c73517;
+                }
+            }
+            h3{
+                background-color:#c73517;
+                color: #FFF;
+                border-bottom:  1px solid #A02B13;
+            }
+            .popover-content{
+                color: #FFF;
+                font-family: "Roboto Slab";
+                font-size: 14px;
+            }
+        }
+       
+    }
+    #testino-wrapper{
+        h2{
+            color: #FFF;
+            margin-top:50px; 
+        }
+        select{
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: 3px solid #ea5a00;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+    }
+    
+}
+
+section{
+    margin-bottom: 50px;
+}
+
+#team{
+    .items-team {
+        margin-bottom: 30px;
+    }
+}
+
+/*******************************************************************************
+** User process
+**/
+
+/*******************************************************************************
+** Footer
+**/
+footer{
+   background-color: #d93a1a;
+   padding: 20px 0;
+   text-align: center;
+    p,a{
+        color: #FFF;
+        text-align:center;
+        margin: 0;
+    }
+    ul{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        li{
+            display: inline-block;
+            list-style: disc;
+            padding: 0 5px;
+            color: #FFF;
+            a{
+                color: #FFF;
+            }
+        }
+    }
+    ul.social{
+        a{
+            font-size: 25px;
+        }
+    }
+}
+
+
+/*******************************************************************************
+** Mobile
+**/
+
+@media only screen and (min-width : 320px) and (max-width:479px) {
+     nav #logo-main{
+        margin-top: 0;
+    }
+    nav #logo-ex{
+        margin-top: 28px;
+    }
+    #top-banner{
+        padding: 0px 0 10px 0;
+        .top-banner-wrap{
+            h1{
+                margin-top: 10px;
+            }
+            img{
+                width: 160px;
+            }
+        }
+    }
+    #top-banner h1{
+        font-size: 24px;
+        line-height: 25px;
+    }
+    #top-banner p{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .title{
+        font-size: 24px;
+    }
+    #simple-price #simple-wrap {
+        width: 100%;
+    }
+    #quanlity-is-invidual h2{
+        font-size: 22px;
+    }
+    #quanlity-is-invidual .wrap-item{
+        margin-bottom: 20px;
+        height: auto;
+    }
+    #testino #tes-container{
+        height: 100px;
+        text-align: center;
+    }
+    #testino #tes-container .u-popover{
+        position: initial;
+        margin-right: 5px;
+    }
+    #simple-wrap{
+        #car1, #car2{
+            display: none;
+        }
+    }
+}
+@media only screen and (min-width : 480px) and (max-width:767px) {
+    nav #logo-main{
+        margin-top: 0;
+    }
+    nav #logo-ex{
+        margin-top: 28px;
+    }
+    #top-banner h1{
+        font-size: 32px;
+        line-height: 38px;
+    }
+    #top-banner p{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .title{
+        font-size: 30px;
+    }
+
+    #simple-price #simple-wrap {
+        width: 100%;
+    }
+    #quanlity-is-invidual h2{
+        font-size: 32px;
+    }
+    #quanlity-is-invidual .wrap-item{
+        margin-bottom: 20px;
+        height: auto;
+    }
+    #testino #tes-container{
+        height: 100px;
+        text-align: center;
+    }
+    #testino #tes-container .u-popover{
+        position: initial;
+        margin-right: 5px;
+    }
+    #simple-wrap{
+        #car1, #car2{
+            display: none;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width : 768px) and (max-width:991px) {
+    #logo{
+        float: none !important;
+        text-align: center;
+        margin-top: 30px;
+    }
+    nav{
+        text-align: center;
+        .pull-right{
+             float: none !important;
+        }
+        ul{
+           
+            display: inline-block;
+        }
+    }
+    #top-nav {
+        text-align: center;
+    }
+    #top-nav ul{
+        margin: 0;
+        display: inline-block;
+    }
+    #top-banner h1{
+        font-size: 50px;
+        line-height: 52px;
+    }
+    #quanlity-is-invidual .wrap-item{
+        height: 429px;
+    }
+    #simple-price #simple-wrap {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 992px) and (max-width:1199px) {
+      #top-nav {
+          text-align: center;
+      }
+      #top-nav ul{
+          margin: 0;
+          display: inline-block;
+      }
+       #quanlity-is-invidual .wrap-item{
+        height: 379px;
+    }
+}
+
+@media only screen and (min-width : 1200px){
+    
+}
